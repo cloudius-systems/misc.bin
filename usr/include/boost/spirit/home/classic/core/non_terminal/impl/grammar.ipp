@@ -307,7 +307,6 @@ struct grammar_definition
 #if !defined(BOOST_SPIRIT_SINGLE_GRAMMAR_INSTANCE)
         typedef impl::grammar_helper_base<GrammarT> helper_base_t;
         typedef grammar_helper_list<GrammarT> helper_list_t;
-        typedef typename helper_list_t::vector_t::reverse_iterator iterator_t;
 
         helper_list_t&  helpers =
 # if !defined(__GNUC__) || (__GNUC__ > 2)

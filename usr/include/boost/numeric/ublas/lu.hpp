@@ -63,7 +63,6 @@ namespace boost { namespace numeric { namespace ublas {
     BOOST_UBLAS_INLINE
     void swap_rows (const PM &pm, MV &mv, vector_tag) {
         typedef typename PM::size_type size_type;
-        typedef typename MV::value_type value_type;
 
         size_type size = pm.size ();
         for (size_type i = 0; i < size; ++ i) {
@@ -75,7 +74,6 @@ namespace boost { namespace numeric { namespace ublas {
     BOOST_UBLAS_INLINE
     void swap_rows (const PM &pm, MV &mv, matrix_tag) {
         typedef typename PM::size_type size_type;
-        typedef typename MV::value_type value_type;
 
         size_type size = pm.size ();
         for (size_type i = 0; i < size; ++ i) {

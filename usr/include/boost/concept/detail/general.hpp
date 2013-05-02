@@ -6,6 +6,7 @@
 
 # include <boost/preprocessor/cat.hpp>
 # include <boost/concept/detail/backward_compatibility.hpp>
+# include <boost/static_assert.hpp>
 
 # ifdef BOOST_OLD_CONCEPT_SUPPORT
 #  include <boost/concept/detail/has_constraints.hpp>
@@ -68,7 +69,8 @@ struct requirement_<void(*)(Model)>
 #  define BOOST_CONCEPT_ASSERT_FN( ModelFnPtr )             \
     typedef ::boost::concepts::detail::instantiate<          \
     &::boost::concepts::requirement_<ModelFnPtr>::failed>    \
-      BOOST_PP_CAT(boost_concept_check,__LINE__)
+      BOOST_PP_CAT(boost_concept_check,__LINE__)	     \
+      BOOST_STATIC_ASSERT_UNUSED_ATTRIBUTE
 
 }}
 

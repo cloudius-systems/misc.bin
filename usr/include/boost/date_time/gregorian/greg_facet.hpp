@@ -6,7 +6,7 @@
  * Boost Software License, Version 1.0. (See accompanying
  * file LICENSE_1_0.txt or http://www.boost.org/LICENSE_1_0.txt)
  * Author: Jeff Garland, Bart Garst
- * $Date: 2008-11-23 06:13:35 -0500 (Sun, 23 Nov 2008) $
+ * $Date: 2008-11-23 03:13:35 -0800 (Sun, 23 Nov 2008) $
  */
 
 #include "boost/date_time/gregorian/gregorian_types.hpp"
@@ -215,7 +215,6 @@ namespace gregorian {
   {
     std::istream_iterator<std::basic_string<charT>, charT> beg(is), eos;
     
-    typedef boost::date_time::all_date_names_put<greg_facet_config, charT> facet_def;
     d = from_stream(beg, eos);
     return is;
   }

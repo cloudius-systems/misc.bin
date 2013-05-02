@@ -855,7 +855,7 @@ T gamma_incomplete_imp(T a, T x, bool normalised, bool invert,
    BOOST_ASSERT((p_derivative == 0) || (normalised == true));
 
    bool is_int, is_half_int;
-   bool is_small_a = (a < 30) && (a <= x + 1);
+   bool is_small_a = (a < 30) && (a <= x + 1) && (x < tools::log_max_value<T>());
    if(is_small_a)
    {
       T fa = floor(a);
@@ -1360,7 +1360,6 @@ inline typename tools::promote_args<T1, T2>::type
    BOOST_FPU_EXCEPTION_GUARD
    typedef typename tools::promote_args<T1, T2>::type result_type;
    typedef typename policies::evaluation<result_type, Policy>::type value_type;
-   typedef typename lanczos::lanczos<value_type, Policy>::type evaluation_type;
    typedef typename policies::normalise<
       Policy, 
       policies::promote_float<false>, 
@@ -1489,7 +1488,6 @@ inline typename tools::promote_args<T1, T2>::type
    BOOST_FPU_EXCEPTION_GUARD
    typedef typename tools::promote_args<T1, T2>::type result_type;
    typedef typename policies::evaluation<result_type, Policy>::type value_type;
-   typedef typename lanczos::lanczos<value_type, Policy>::type evaluation_type;
    typedef typename policies::normalise<
       Policy, 
       policies::promote_float<false>, 
@@ -1520,7 +1518,6 @@ inline typename tools::promote_args<T1, T2>::type
    BOOST_FPU_EXCEPTION_GUARD
    typedef typename tools::promote_args<T1, T2>::type result_type;
    typedef typename policies::evaluation<result_type, Policy>::type value_type;
-   typedef typename lanczos::lanczos<value_type, Policy>::type evaluation_type;
    typedef typename policies::normalise<
       Policy, 
       policies::promote_float<false>, 
@@ -1551,7 +1548,6 @@ inline typename tools::promote_args<T1, T2>::type
    BOOST_FPU_EXCEPTION_GUARD
    typedef typename tools::promote_args<T1, T2>::type result_type;
    typedef typename policies::evaluation<result_type, Policy>::type value_type;
-   typedef typename lanczos::lanczos<value_type, Policy>::type evaluation_type;
    typedef typename policies::normalise<
       Policy, 
       policies::promote_float<false>, 
