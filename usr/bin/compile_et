@@ -5,7 +5,7 @@
 datarootdir=/usr/share
 AWK=gawk
 DIR="${DIR-/usr/share/et}"
-ET_DIR="/builddir/build/BUILD/e2fsprogs-1.42.11/lib/et"
+ET_DIR="/builddir/build/BUILD/e2fsprogs-1.42.12/lib/et"
 
 if test "$1" = "--build-tree" ; then
     shift;

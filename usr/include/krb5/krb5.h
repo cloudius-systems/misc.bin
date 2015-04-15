@@ -8301,7 +8301,7 @@ KRB5INT_END_DECLS
 #define KRB5PLACEHOLD_88                         (-1765328296L)
 #define KRB5PLACEHOLD_89                         (-1765328295L)
 #define KRB5PLACEHOLD_90                         (-1765328294L)
-#define KRB5PLACEHOLD_91                         (-1765328293L)
+#define KRB5KDC_ERR_MORE_PREAUTH_DATA_REQUIRED   (-1765328293L)
 #define KRB5PLACEHOLD_92                         (-1765328292L)
 #define KRB5KDC_ERR_UNKNOWN_CRITICAL_FAST_OPTION (-1765328291L)
 #define KRB5PLACEHOLD_94                         (-1765328290L)

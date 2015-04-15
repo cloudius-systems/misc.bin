@@ -5,7 +5,7 @@ includedir=/usr/include
 
 Name: mit-krb5-gssapi
 Description: Kerberos implementation of the GSSAPI
-Version: 1.12.1
+Version: 1.12.2
 Requires.private: mit-krb5
 Cflags: -I${includedir}
 Libs: -L${libdir} -lgssapi_krb5

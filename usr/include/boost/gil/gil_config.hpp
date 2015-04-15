@@ -32,7 +32,7 @@
 #if   defined(_MSC_VER)
 #    define GIL_FORCEINLINE __forceinline
 #elif defined(__GNUC__) && __GNUC__ > 3
-#    define GIL_FORCEINLINE inline __attribute__ ((__always_inline__))
+#    define GIL_FORCEINLINE inline __attribute__ ((always_inline))
 #else
 #    define GIL_FORCEINLINE inline
 #endif
